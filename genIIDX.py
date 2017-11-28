@@ -1,7 +1,7 @@
 import sys,time
 import jieba
 jieba.load_userdict('dict/dict_unique')
-print(sys.argv[1])
+
 class BitSet:
     def __init__(self, elementNum):
         self.bytesNum = round(elementNum/8)
@@ -50,13 +50,13 @@ print('size of dict: ',len(word2int))
 
 
 
-partsNum = 4919
-arg = int(sys.argv[1])
+partsNum = 49125
+
 
 invertedIndex = [BitSet(partsNum) for i in range(wordsNum)]
 print('每个字的倒排索引表的字节数：',invertedIndex[0].bytesNum)
 
-for partIdx in range(arg*500,min(partsNum,arg*500+500)):
+for partIdx in range(partsNum):
 
     processBar(partIdx, partsNum)
 
@@ -72,6 +72,6 @@ for partIdx in range(arg*500,min(partsNum,arg*500+500)):
 
 for idx in range(wordsNum):    
     processBar(idx, wordsNum)
-    with open('iidx/frag_'+str(arg)+'ch_'+str(idx)+'.iidx','w',encoding='utf8') as f:
+    with open('iidx/ch_'+str(idx)+'.iidx','w',encoding='utf8') as f:
             for j in invertedIndex[idx].set:
                 f.write(str(j)+' ')
