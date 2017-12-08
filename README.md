@@ -1,6 +1,6 @@
 # QA 中文问答
 
-##QA1.0 
+## QA1.0 
 参见 [QA1.0/SearchEngine.ipynb](https://github.com/githubxiaowei/QA/blob/master/QA1.0/SearchEngine.ipynb)
 
 * 直接将xml文档分成平均大小约100k的49125块part,存到parts/目录下
@@ -9,7 +9,7 @@
 * 取出部分part，分析这些part中每一句话，找到包含不同分词最多的语句
 
 
-##QA2.0 
+## QA2.0 
 参见[QA2.0/SearchEngine.ipynb](https://github.com/githubxiaowei/QA/blob/master/QA2.0/SearchEngine.ipynb)
 
 * 使用xmlReader流式读取xml文件，解析出每一个page,存到pages/[0-46]/[0-255]/目录下，最后一个文件 pages/46/59/180，故页面总数为46*256*256+59*256+181=3029941
@@ -18,7 +18,7 @@
 * 取出相关page，分析这些page中每一句话，找到包含不同分词最多的语句
 
 
-##QA1.0 
+## QA1.0 
 参见[QA3.0/SearchEngine.ipynb](https://github.com/githubxiaowei/QA/blob/master/QA3.0/SearchEngine.ipynb)
 
 * 使用xmlReader流式读取xml文件，解析出每一个page,存到pages/[0-46]/[0-255]/目录下（同QA2.0）
